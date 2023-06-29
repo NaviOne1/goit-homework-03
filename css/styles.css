@@ -171,8 +171,7 @@ body {
 
 /* ==============HEADER================ */
 .page-header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+ 
   border-bottom: 1px solid var(--cornflower);
 }
 
@@ -382,8 +381,8 @@ body {
 }
 .gallary-card-content-wrraper {
   padding: 32px 16px;
-  border-top: none;
   border: 1px solid var(--cornflower, #e7e9fc);
+  border-top: none;
 }
 
 .button-filter:hover,
