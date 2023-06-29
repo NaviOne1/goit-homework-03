@@ -73,7 +73,7 @@ body {
   color: #4d5ae5;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 156px;
+  margin-right: 76px;
 }
 
 .accent-logo {
@@ -98,6 +98,7 @@ body {
   line-height: 1.2;
   letter-spacing: var(--primary-letter-spacing);
   color: var(--secondary-text-color);
+  margin-bottom: 8px;
 }
 
 .description-text {
@@ -106,7 +107,6 @@ body {
 
 .footer-text {
   color: #f4f4fd;
-  margin-top: 17.5px;
   display: flex;
   width: 264px;
   flex-direction: column;
@@ -118,7 +118,17 @@ body {
 }
 
 .visually-hidden {
-  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  }
 }
 /* ==================/COMPONENTS================ */
 /* HEADER */
@@ -190,6 +200,10 @@ body {
 .menu-contacts {
   display: flex;
   align-items: center;
+  gap: 40px;
+}
+.menu-item {
+  padding: 24px 0;
 }
 
 .menu-item:not(:last-child) {
@@ -217,11 +231,12 @@ body {
   letter-spacing: var(--primary-letter-spacing);
   color: #ffffff;
   display: flex;
-  width: 496px;
+  min-width: 496px;
   flex-direction: column;
   flex-shrink: 0;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 .main-btn {
@@ -236,13 +251,16 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 48px;
-  display: flex;
+  display:block ;
   padding-left: 32px;
   padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
+  min-width: 169px;
+  height: 56px;
   align-items: flex-start;
   gap: 10px;
+  border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
@@ -261,10 +279,14 @@ body {
 .soulitions-list {
   display: flex;
 }
+.soulitions-list-item {
+  flex-basis: calc((100% - 3 * 24px) / 4)
+}
 
 .soulitions-list-item:not(:last-child) {
   margin-right: 24px;
 }
+
 
 /* ==============WHAT WE DOING============= */
 .section-our-works {
@@ -290,6 +312,7 @@ body {
 
 .team-item {
   background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
 }
 
 .title-employees {
@@ -340,7 +363,7 @@ body {
   
 }
 .item-filter {
- 
+
 }
 
 .button-filter {
@@ -362,12 +385,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  row-gap: 48px;
 
 }
 .gallary-card-content-wrraper {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 16px;
+  padding: 32px 16px;
+  border-top: none;
   border: 1px solid var(--cornflower, #E7E9FC);
 }
 
@@ -375,6 +398,7 @@ body {
 .button-filter:focus {
   color: #ffffff;
   background: var(--accent-color);
+  border: 1px solid transparent;
 }
 
 
@@ -388,3 +412,7 @@ body {
 }
 
 /* ==================FOOTER================= */
+.footer-link {
+  display: inline-block;
+  margin-bottom: 16px;
+}
